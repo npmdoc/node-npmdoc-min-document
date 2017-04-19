@@ -1,0 +1,2240 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/Raynos/min-document"
+
+    >min-document (v2.19.0)</a>
+</h1>
+<h4>A minimal DOM implementation</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.min-document">module min-document</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.document">
+            function <span class="apidocSignatureSpan">min-document.</span>document
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_comment">
+            function <span class="apidocSignatureSpan">min-document.</span>dom_comment
+            <span class="apidocSignatureSpan">(data, owner)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_element">
+            function <span class="apidocSignatureSpan">min-document.</span>dom_element
+            <span class="apidocSignatureSpan">(tagName, owner, namespace)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_fragment">
+            function <span class="apidocSignatureSpan">min-document.</span>dom_fragment
+            <span class="apidocSignatureSpan">(owner)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_text">
+            function <span class="apidocSignatureSpan">min-document.</span>dom_text
+            <span class="apidocSignatureSpan">(value, owner)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.event">
+            function <span class="apidocSignatureSpan">min-document.</span>event
+            <span class="apidocSignatureSpan">(family)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">min-document.</span>nodeType</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">min-document.</span>body</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">min-document.</span>childNodes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">min-document.</span>document.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">min-document.</span>documentElement</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">min-document.</span>dom_comment.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">min-document.</span>dom_element.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">min-document.</span>dom_fragment.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">min-document.</span>dom_text.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">min-document.</span>event.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">min-document.</span>head</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.min-document.document">module min-document.document</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.document.document">
+            function <span class="apidocSignatureSpan">min-document.</span>document
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.min-document.document.prototype">module min-document.document.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.document.prototype.addEventListener">
+            function <span class="apidocSignatureSpan">min-document.document.prototype.</span>addEventListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.document.prototype.contains">
+            function <span class="apidocSignatureSpan">min-document.document.prototype.</span>contains
+            <span class="apidocSignatureSpan">(element)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.document.prototype.createComment">
+            function <span class="apidocSignatureSpan">min-document.document.prototype.</span>createComment
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.document.prototype.createDocumentFragment">
+            function <span class="apidocSignatureSpan">min-document.document.prototype.</span>createDocumentFragment
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.document.prototype.createElement">
+            function <span class="apidocSignatureSpan">min-document.document.prototype.</span>createElement
+            <span class="apidocSignatureSpan">(tagName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.document.prototype.createElementNS">
+            function <span class="apidocSignatureSpan">min-document.document.prototype.</span>createElementNS
+            <span class="apidocSignatureSpan">(namespace, tagName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.document.prototype.createEvent">
+            function <span class="apidocSignatureSpan">min-document.document.prototype.</span>createEvent
+            <span class="apidocSignatureSpan">(family)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.document.prototype.createTextNode">
+            function <span class="apidocSignatureSpan">min-document.document.prototype.</span>createTextNode
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.document.prototype.dispatchEvent">
+            function <span class="apidocSignatureSpan">min-document.document.prototype.</span>dispatchEvent
+            <span class="apidocSignatureSpan">(ev)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.document.prototype.getElementById">
+            function <span class="apidocSignatureSpan">min-document.document.prototype.</span>getElementById
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.document.prototype.getElementsByClassName">
+            function <span class="apidocSignatureSpan">min-document.document.prototype.</span>getElementsByClassName
+            <span class="apidocSignatureSpan">(classNames)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.document.prototype.getElementsByTagName">
+            function <span class="apidocSignatureSpan">min-document.document.prototype.</span>getElementsByTagName
+            <span class="apidocSignatureSpan">(tagName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.document.prototype.removeEventListener">
+            function <span class="apidocSignatureSpan">min-document.document.prototype.</span>removeEventListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.min-document.dom_comment">module min-document.dom_comment</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_comment.dom_comment">
+            function <span class="apidocSignatureSpan">min-document.</span>dom_comment
+            <span class="apidocSignatureSpan">(data, owner)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.min-document.dom_comment.prototype">module min-document.dom_comment.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_comment.prototype.toString">
+            function <span class="apidocSignatureSpan">min-document.dom_comment.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">min-document.dom_comment.prototype.</span>nodeType</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">min-document.dom_comment.prototype.</span>nodeName</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.min-document.dom_element">module min-document.dom_element</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_element.dom_element">
+            function <span class="apidocSignatureSpan">min-document.</span>dom_element
+            <span class="apidocSignatureSpan">(tagName, owner, namespace)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.min-document.dom_element.prototype">module min-document.dom_element.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_element.prototype.addEventListener">
+            function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>addEventListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_element.prototype.appendChild">
+            function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>appendChild
+            <span class="apidocSignatureSpan">(child)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_element.prototype.contains">
+            function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>contains
+            <span class="apidocSignatureSpan">(element)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_element.prototype.dispatchEvent">
+            function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>dispatchEvent
+            <span class="apidocSignatureSpan">(ev)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_element.prototype.focus">
+            function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>focus
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_element.prototype.getAttribute">
+            function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>getAttribute
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_element.prototype.getAttributeNS">
+            function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>getAttributeNS
+            <span class="apidocSignatureSpan">(namespace, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_element.prototype.getElementsByClassName">
+            function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>getElementsByClassName
+            <span class="apidocSignatureSpan">(classNames)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_element.prototype.getElementsByTagName">
+            function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>getElementsByTagName
+            <span class="apidocSignatureSpan">(tagName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_element.prototype.hasAttribute">
+            function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>hasAttribute
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_element.prototype.hasAttributeNS">
+            function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>hasAttributeNS
+            <span class="apidocSignatureSpan">(namespace, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_element.prototype.insertBefore">
+            function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>insertBefore
+            <span class="apidocSignatureSpan">(elem, needle)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_element.prototype.removeAttribute">
+            function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>removeAttribute
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_element.prototype.removeAttributeNS">
+            function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>removeAttributeNS
+            <span class="apidocSignatureSpan">(namespace, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_element.prototype.removeChild">
+            function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>removeChild
+            <span class="apidocSignatureSpan">(elem)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_element.prototype.removeEventListener">
+            function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>removeEventListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_element.prototype.replaceChild">
+            function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>replaceChild
+            <span class="apidocSignatureSpan">(elem, needle)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_element.prototype.setAttribute">
+            function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>setAttribute
+            <span class="apidocSignatureSpan">(name, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_element.prototype.setAttributeNS">
+            function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>setAttributeNS
+            <span class="apidocSignatureSpan">(namespace, name, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_element.prototype.toString">
+            function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>nodeType</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>type</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.min-document.dom_fragment">module min-document.dom_fragment</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_fragment.dom_fragment">
+            function <span class="apidocSignatureSpan">min-document.</span>dom_fragment
+            <span class="apidocSignatureSpan">(owner)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.min-document.dom_fragment.prototype">module min-document.dom_fragment.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_fragment.prototype.appendChild">
+            function <span class="apidocSignatureSpan">min-document.dom_fragment.prototype.</span>appendChild
+            <span class="apidocSignatureSpan">(child)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_fragment.prototype.removeChild">
+            function <span class="apidocSignatureSpan">min-document.dom_fragment.prototype.</span>removeChild
+            <span class="apidocSignatureSpan">(elem)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_fragment.prototype.replaceChild">
+            function <span class="apidocSignatureSpan">min-document.dom_fragment.prototype.</span>replaceChild
+            <span class="apidocSignatureSpan">(elem, needle)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_fragment.prototype.toString">
+            function <span class="apidocSignatureSpan">min-document.dom_fragment.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">min-document.dom_fragment.prototype.</span>nodeType</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">min-document.dom_fragment.prototype.</span>nodeName</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">min-document.dom_fragment.prototype.</span>type</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.min-document.dom_text">module min-document.dom_text</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_text.dom_text">
+            function <span class="apidocSignatureSpan">min-document.</span>dom_text
+            <span class="apidocSignatureSpan">(value, owner)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.min-document.dom_text.prototype">module min-document.dom_text.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_text.prototype.replaceData">
+            function <span class="apidocSignatureSpan">min-document.dom_text.prototype.</span>replaceData
+            <span class="apidocSignatureSpan">(index, length, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.dom_text.prototype.toString">
+            function <span class="apidocSignatureSpan">min-document.dom_text.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">min-document.dom_text.prototype.</span>nodeType</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">min-document.dom_text.prototype.</span>nodeName</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">min-document.dom_text.prototype.</span>type</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.min-document.event">module min-document.event</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.event.event">
+            function <span class="apidocSignatureSpan">min-document.</span>event
+            <span class="apidocSignatureSpan">(family)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.min-document.event.prototype">module min-document.event.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.event.prototype.initEvent">
+            function <span class="apidocSignatureSpan">min-document.event.prototype.</span>initEvent
+            <span class="apidocSignatureSpan">(type, bubbles, cancelable)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.min-document.event.prototype.preventDefault">
+            function <span class="apidocSignatureSpan">min-document.event.prototype.</span>preventDefault
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.min-document" id="apidoc.module.min-document">module min-document</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.document" id="apidoc.element.min-document.document">
+        function <span class="apidocSignatureSpan">min-document.</span>document
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Document() {
+    if (!(this instanceof Document)) {
+        return new Document();
+    }
+
+    this.head = this.createElement(&#x22;head&#x22;)
+    this.body = this.createElement(&#x22;body&#x22;)
+    this.documentElement = this.createElement(&#x22;html&#x22;)
+    this.documentElement.appendChild(this.head)
+    this.documentElement.appendChild(this.body)
+    this.childNodes = [this.documentElement]
+    this.nodeType = 9
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_comment" id="apidoc.element.min-document.dom_comment">
+        function <span class="apidocSignatureSpan">min-document.</span>dom_comment
+        <span class="apidocSignatureSpan">(data, owner)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Comment(data, owner) {
+    if (!(this instanceof Comment)) {
+        return new Comment(data, owner)
+    }
+
+    this.data = data
+    this.nodeValue = data
+    this.length = data.length
+    this.ownerDocument = owner || null
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_element" id="apidoc.element.min-document.dom_element">
+        function <span class="apidocSignatureSpan">min-document.</span>dom_element
+        <span class="apidocSignatureSpan">(tagName, owner, namespace)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DOMElement(tagName, owner, namespace) {
+    if (!(this instanceof DOMElement)) {
+        return new DOMElement(tagName)
+    }
+
+    var ns = namespace === undefined ? htmlns : (namespace || null)
+
+    this.tagName = ns === htmlns ? String(tagName).toUpperCase() : tagName
+    this.nodeName = this.tagName
+    this.className = &#x22;&#x22;
+    this.dataset = {}
+    this.childNodes = []
+    this.parentNode = null
+    this.style = {}
+    this.ownerDocument = owner || null
+    this.namespaceURI = ns
+    this._attributes = {}
+
+    if (this.tagName === &#x27;INPUT&#x27;) {
+      this.type = &#x27;text&#x27;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_fragment" id="apidoc.element.min-document.dom_fragment">
+        function <span class="apidocSignatureSpan">min-document.</span>dom_fragment
+        <span class="apidocSignatureSpan">(owner)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DocumentFragment(owner) {
+    if (!(this instanceof DocumentFragment)) {
+        return new DocumentFragment()
+    }
+
+    this.childNodes = []
+    this.parentNode = null
+    this.ownerDocument = owner || null
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_text" id="apidoc.element.min-document.dom_text">
+        function <span class="apidocSignatureSpan">min-document.</span>dom_text
+        <span class="apidocSignatureSpan">(value, owner)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DOMText(value, owner) {
+    if (!(this instanceof DOMText)) {
+        return new DOMText(value)
+    }
+
+    this.data = value || &#x22;&#x22;
+    this.length = this.data.length
+    this.ownerDocument = owner || null
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.event" id="apidoc.element.min-document.event">
+        function <span class="apidocSignatureSpan">min-document.</span>event
+        <span class="apidocSignatureSpan">(family)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Event(family) {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.min-document.document" id="apidoc.module.min-document.document">module min-document.document</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.document.document" id="apidoc.element.min-document.document.document">
+        function <span class="apidocSignatureSpan">min-document.</span>document
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Document() {
+    if (!(this instanceof Document)) {
+        return new Document();
+    }
+
+    this.head = this.createElement(&#x22;head&#x22;)
+    this.body = this.createElement(&#x22;body&#x22;)
+    this.documentElement = this.createElement(&#x22;html&#x22;)
+    this.documentElement.appendChild(this.head)
+    this.documentElement.appendChild(this.body)
+    this.childNodes = [this.documentElement]
+    this.nodeType = 9
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.min-document.document.prototype" id="apidoc.module.min-document.document.prototype">module min-document.document.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.document.prototype.addEventListener" id="apidoc.element.min-document.document.prototype.addEventListener">
+        function <span class="apidocSignatureSpan">min-document.document.prototype.</span>addEventListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addEventListener(type, listener) {
+    var elem = this
+
+    if (!elem.listeners) {
+        elem.listeners = {}
+    }
+
+    if (!elem.listeners[type]) {
+        elem.listeners[type] = []
+    }
+
+    if (elem.listeners[type].indexOf(listener) === -1) {
+        elem.listeners[type].push(listener)
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.document.prototype.contains" id="apidoc.element.min-document.document.prototype.contains">
+        function <span class="apidocSignatureSpan">min-document.document.prototype.</span>contains
+        <span class="apidocSignatureSpan">(element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Element_contains(element) {
+    return domWalk(this, function (node) {
+        return element === node
+    }) || false
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.document.prototype.createComment" id="apidoc.element.min-document.document.prototype.createComment">
+        function <span class="apidocSignatureSpan">min-document.document.prototype.</span>createComment
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createComment(data) {
+    return new Comment(data, this)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.document.prototype.createDocumentFragment" id="apidoc.element.min-document.document.prototype.createDocumentFragment">
+        function <span class="apidocSignatureSpan">min-document.document.prototype.</span>createDocumentFragment
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createDocumentFragment() {
+    return new DocumentFragment(this)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.document.prototype.createElement" id="apidoc.element.min-document.document.prototype.createElement">
+        function <span class="apidocSignatureSpan">min-document.document.prototype.</span>createElement
+        <span class="apidocSignatureSpan">(tagName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createElement(tagName) {
+    return new DOMElement(tagName, this)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+A minimal DOM implementation
+
+## Example
+
+```js
+var document = require(&#x22;min-document&#x22;)
+
+var div = document.<span class="apidocCodeKeywordSpan">createElement</span>(&#x22;div&#x22;)
+div.className = &#x22;foo bar&#x22;
+
+var span = document.createElement(&#x22;span&#x22;)
+div.appendChild(span)
+span.textContent = &#x22;Hello!&#x22;
+
+/*  &#x3c;div class=&#x22;foo bar&#x22;&#x3e;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.document.prototype.createElementNS" id="apidoc.element.min-document.document.prototype.createElementNS">
+        function <span class="apidocSignatureSpan">min-document.document.prototype.</span>createElementNS
+        <span class="apidocSignatureSpan">(namespace, tagName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createElementNS(namespace, tagName) {
+    var ns = namespace === null ? null : String(namespace)
+    return new DOMElement(tagName, this, ns)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.document.prototype.createEvent" id="apidoc.element.min-document.document.prototype.createEvent">
+        function <span class="apidocSignatureSpan">min-document.document.prototype.</span>createEvent
+        <span class="apidocSignatureSpan">(family)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createEvent(family) {
+    return new Event(family)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.document.prototype.createTextNode" id="apidoc.element.min-document.document.prototype.createTextNode">
+        function <span class="apidocSignatureSpan">min-document.document.prototype.</span>createTextNode
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createTextNode(value) {
+    return new DOMText(value, this)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.document.prototype.dispatchEvent" id="apidoc.element.min-document.document.prototype.dispatchEvent">
+        function <span class="apidocSignatureSpan">min-document.document.prototype.</span>dispatchEvent
+        <span class="apidocSignatureSpan">(ev)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dispatchEvent(ev) {
+    var elem = this
+    var type = ev.type
+
+    if (!ev.target) {
+        ev.target = elem
+    }
+
+    if (!elem.listeners) {
+        elem.listeners = {}
+    }
+
+    var listeners = elem.listeners[type]
+
+    if (listeners) {
+        return listeners.forEach(function (listener) {
+            ev.currentTarget = elem
+            if (typeof listener === &#x27;function&#x27;) {
+                listener(ev)
+            } else {
+                listener.handleEvent(ev)
+            }
+        })
+    }
+
+    if (elem.parentNode) {
+        elem.parentNode.dispatchEvent(ev)
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            } else {
+                listener.handleEvent(ev)
+            }
+        })
+    }
+
+    if (elem.parentNode) {
+        elem.parentNode.<span class="apidocCodeKeywordSpan">dispatchEvent</span>(ev)
+    }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.document.prototype.getElementById" id="apidoc.element.min-document.document.prototype.getElementById">
+        function <span class="apidocSignatureSpan">min-document.document.prototype.</span>getElementById
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getElementById(id) {
+    id = String(id)
+
+    var result = domWalk(this.childNodes, function (node) {
+        if (String(node.id) === id) {
+            return node
+        }
+    })
+
+    return result || null
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.document.prototype.getElementsByClassName" id="apidoc.element.min-document.document.prototype.getElementsByClassName">
+        function <span class="apidocSignatureSpan">min-document.document.prototype.</span>getElementsByClassName
+        <span class="apidocSignatureSpan">(classNames)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Element_getElementsByClassName(classNames) {
+    var classes = classNames.split(&#x22; &#x22;);
+    var elems = []
+
+    domWalk(this, function (node) {
+        if (node.nodeType === 1) {
+            var nodeClassName = node.className || &#x22;&#x22;
+            var nodeClasses = nodeClassName.split(&#x22; &#x22;)
+
+            if (classes.every(function (item) {
+                return nodeClasses.indexOf(item) !== -1
+            })) {
+                elems.push(node)
+            }
+        }
+    })
+
+    return elems
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.document.prototype.getElementsByTagName" id="apidoc.element.min-document.document.prototype.getElementsByTagName">
+        function <span class="apidocSignatureSpan">min-document.document.prototype.</span>getElementsByTagName
+        <span class="apidocSignatureSpan">(tagName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Element_getElementsByTagName(tagName) {
+    tagName = tagName.toLowerCase()
+    var elems = []
+
+    domWalk(this.childNodes, function (node) {
+        if (node.nodeType === 1 &#x26;&#x26; (tagName === &#x27;*&#x27; || node.tagName.toLowerCase() === tagName)) {
+            elems.push(node)
+        }
+    })
+
+    return elems
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.document.prototype.removeEventListener" id="apidoc.element.min-document.document.prototype.removeEventListener">
+        function <span class="apidocSignatureSpan">min-document.document.prototype.</span>removeEventListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function removeEventListener(type, listener) {
+    var elem = this
+
+    if (!elem.listeners) {
+        return
+    }
+
+    if (!elem.listeners[type]) {
+        return
+    }
+
+    var list = elem.listeners[type]
+    var index = list.indexOf(listener)
+    if (index !== -1) {
+        list.splice(index, 1)
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.min-document.dom_comment" id="apidoc.module.min-document.dom_comment">module min-document.dom_comment</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_comment.dom_comment" id="apidoc.element.min-document.dom_comment.dom_comment">
+        function <span class="apidocSignatureSpan">min-document.</span>dom_comment
+        <span class="apidocSignatureSpan">(data, owner)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Comment(data, owner) {
+    if (!(this instanceof Comment)) {
+        return new Comment(data, owner)
+    }
+
+    this.data = data
+    this.nodeValue = data
+    this.length = data.length
+    this.ownerDocument = owner || null
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.min-document.dom_comment.prototype" id="apidoc.module.min-document.dom_comment.prototype">module min-document.dom_comment.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_comment.prototype.toString" id="apidoc.element.min-document.dom_comment.prototype.toString">
+        function <span class="apidocSignatureSpan">min-document.dom_comment.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Comment_toString() {
+    return &#x22;[object Comment]&#x22;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function escapeText(s) {
+    var str = &#x27;&#x27;;
+
+    if (typeof(s) === &#x27;string&#x27;) {
+        str = s;
+    } else if (s) {
+        str = s.<span class="apidocCodeKeywordSpan">toString</span>();
+    }
+
+    return str
+        .replace(/&#x26;/g, &#x22;&#x26;amp;&#x22;)
+        .replace(/&#x3c;/g, &#x22;&#x26;lt;&#x22;)
+        .replace(/&#x3e;/g, &#x22;&#x26;gt;&#x22;)
+}
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.min-document.dom_element" id="apidoc.module.min-document.dom_element">module min-document.dom_element</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_element.dom_element" id="apidoc.element.min-document.dom_element.dom_element">
+        function <span class="apidocSignatureSpan">min-document.</span>dom_element
+        <span class="apidocSignatureSpan">(tagName, owner, namespace)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DOMElement(tagName, owner, namespace) {
+    if (!(this instanceof DOMElement)) {
+        return new DOMElement(tagName)
+    }
+
+    var ns = namespace === undefined ? htmlns : (namespace || null)
+
+    this.tagName = ns === htmlns ? String(tagName).toUpperCase() : tagName
+    this.nodeName = this.tagName
+    this.className = &#x22;&#x22;
+    this.dataset = {}
+    this.childNodes = []
+    this.parentNode = null
+    this.style = {}
+    this.ownerDocument = owner || null
+    this.namespaceURI = ns
+    this._attributes = {}
+
+    if (this.tagName === &#x27;INPUT&#x27;) {
+      this.type = &#x27;text&#x27;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.min-document.dom_element.prototype" id="apidoc.module.min-document.dom_element.prototype">module min-document.dom_element.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_element.prototype.addEventListener" id="apidoc.element.min-document.dom_element.prototype.addEventListener">
+        function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>addEventListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addEventListener(type, listener) {
+    var elem = this
+
+    if (!elem.listeners) {
+        elem.listeners = {}
+    }
+
+    if (!elem.listeners[type]) {
+        elem.listeners[type] = []
+    }
+
+    if (elem.listeners[type].indexOf(listener) === -1) {
+        elem.listeners[type].push(listener)
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_element.prototype.appendChild" id="apidoc.element.min-document.dom_element.prototype.appendChild">
+        function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>appendChild
+        <span class="apidocSignatureSpan">(child)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Element_appendChild(child) {
+    if (child.parentNode) {
+        child.parentNode.removeChild(child)
+    }
+
+    this.childNodes.push(child)
+    child.parentNode = this
+
+    return child
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var document = require(&#x22;min-document&#x22;)
+
+var div = document.createElement(&#x22;div&#x22;)
+div.className = &#x22;foo bar&#x22;
+
+var span = document.createElement(&#x22;span&#x22;)
+div.<span class="apidocCodeKeywordSpan">appendChild</span>(span)
+span.textContent = &#x22;Hello!&#x22;
+
+/*  &#x3c;div class=&#x22;foo bar&#x22;&#x3e;
+        &#x3c;span&#x3e;Hello!&#x3c;/span&#x3e;
+    &#x3c;/div&#x3e;
+*/
+var html = String(div)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_element.prototype.contains" id="apidoc.element.min-document.dom_element.prototype.contains">
+        function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>contains
+        <span class="apidocSignatureSpan">(element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Element_contains(element) {
+    return domWalk(this, function (node) {
+        return element === node
+    }) || false
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_element.prototype.dispatchEvent" id="apidoc.element.min-document.dom_element.prototype.dispatchEvent">
+        function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>dispatchEvent
+        <span class="apidocSignatureSpan">(ev)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dispatchEvent(ev) {
+    var elem = this
+    var type = ev.type
+
+    if (!ev.target) {
+        ev.target = elem
+    }
+
+    if (!elem.listeners) {
+        elem.listeners = {}
+    }
+
+    var listeners = elem.listeners[type]
+
+    if (listeners) {
+        return listeners.forEach(function (listener) {
+            ev.currentTarget = elem
+            if (typeof listener === &#x27;function&#x27;) {
+                listener(ev)
+            } else {
+                listener.handleEvent(ev)
+            }
+        })
+    }
+
+    if (elem.parentNode) {
+        elem.parentNode.dispatchEvent(ev)
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            } else {
+                listener.handleEvent(ev)
+            }
+        })
+    }
+
+    if (elem.parentNode) {
+        elem.parentNode.<span class="apidocCodeKeywordSpan">dispatchEvent</span>(ev)
+    }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_element.prototype.focus" id="apidoc.element.min-document.dom_element.prototype.focus">
+        function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>focus
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Element_focus() {
+    return void 0
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_element.prototype.getAttribute" id="apidoc.element.min-document.dom_element.prototype.getAttribute">
+        function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>getAttribute
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Element_getAttribute(name) {
+    return this.getAttributeNS(null, name)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_element.prototype.getAttributeNS" id="apidoc.element.min-document.dom_element.prototype.getAttributeNS">
+        function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>getAttributeNS
+        <span class="apidocSignatureSpan">(namespace, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Element_getAttributeNS(namespace, name) {
+    var attributes = this._attributes[namespace];
+    var value = attributes &#x26;&#x26; attributes[name] &#x26;&#x26; attributes[name].value
+    if (this.tagName === &#x27;INPUT&#x27; &#x26;&#x26; name === &#x27;type&#x27;) {
+      return this.type;
+    }
+    if (typeof value !== &#x22;string&#x22;) {
+        return null
+    }
+    return value
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+
+DOMElement.prototype.setAttribute = function _Element_setAttribute(name, value) {
+    return this.setAttributeNS(null, name, value)
+}
+
+DOMElement.prototype.getAttribute = function _Element_getAttribute(name) {
+    return this.<span class="apidocCodeKeywordSpan">getAttributeNS</span>(null, name)
+}
+
+DOMElement.prototype.removeAttribute = function _Element_removeAttribute(name) {
+    return this.removeAttributeNS(null, name)
+}
+
+DOMElement.prototype.hasAttribute = function _Element_hasAttribute(name) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_element.prototype.getElementsByClassName" id="apidoc.element.min-document.dom_element.prototype.getElementsByClassName">
+        function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>getElementsByClassName
+        <span class="apidocSignatureSpan">(classNames)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Element_getElementsByClassName(classNames) {
+    var classes = classNames.split(&#x22; &#x22;);
+    var elems = []
+
+    domWalk(this, function (node) {
+        if (node.nodeType === 1) {
+            var nodeClassName = node.className || &#x22;&#x22;
+            var nodeClasses = nodeClassName.split(&#x22; &#x22;)
+
+            if (classes.every(function (item) {
+                return nodeClasses.indexOf(item) !== -1
+            })) {
+                elems.push(node)
+            }
+        }
+    })
+
+    return elems
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_element.prototype.getElementsByTagName" id="apidoc.element.min-document.dom_element.prototype.getElementsByTagName">
+        function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>getElementsByTagName
+        <span class="apidocSignatureSpan">(tagName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Element_getElementsByTagName(tagName) {
+    tagName = tagName.toLowerCase()
+    var elems = []
+
+    domWalk(this.childNodes, function (node) {
+        if (node.nodeType === 1 &#x26;&#x26; (tagName === &#x27;*&#x27; || node.tagName.toLowerCase() === tagName)) {
+            elems.push(node)
+        }
+    })
+
+    return elems
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_element.prototype.hasAttribute" id="apidoc.element.min-document.dom_element.prototype.hasAttribute">
+        function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>hasAttribute
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Element_hasAttribute(name) {
+    return this.hasAttributeNS(null, name)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_element.prototype.hasAttributeNS" id="apidoc.element.min-document.dom_element.prototype.hasAttributeNS">
+        function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>hasAttributeNS
+        <span class="apidocSignatureSpan">(namespace, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Element_hasAttributeNS(namespace, name) {
+    var attributes = this._attributes[namespace]
+    return !!attributes &#x26;&#x26; name in attributes;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+DOMElement.prototype.removeAttribute = function _Element_removeAttribute(name) {
+    return this.removeAttributeNS(null, name)
+}
+
+DOMElement.prototype.hasAttribute = function _Element_hasAttribute(name) {
+    return this.<span class="apidocCodeKeywordSpan">hasAttributeNS</span>(null, name)
+}
+
+DOMElement.prototype.removeEventListener = removeEventListener
+DOMElement.prototype.addEventListener = addEventListener
+DOMElement.prototype.dispatchEvent = dispatchEvent
+
+// Un-implemented
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_element.prototype.insertBefore" id="apidoc.element.min-document.dom_element.prototype.insertBefore">
+        function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>insertBefore
+        <span class="apidocSignatureSpan">(elem, needle)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Element_insertBefore(elem, needle) {
+    // TODO: Throw NotFoundError if referenceElement is a dom node
+    // and parentNode !== this
+
+    if (elem.parentNode) {
+        elem.parentNode.removeChild(elem)
+    }
+
+    var index = needle === null || needle === undefined ?
+        -1 :
+        this.childNodes.indexOf(needle)
+
+    if (index &#x3e; -1) {
+        this.childNodes.splice(index, 0, elem)
+    } else {
+        this.childNodes.push(elem)
+    }
+
+    elem.parentNode = this
+    return elem
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_element.prototype.removeAttribute" id="apidoc.element.min-document.dom_element.prototype.removeAttribute">
+        function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>removeAttribute
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Element_removeAttribute(name) {
+    return this.removeAttributeNS(null, name)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_element.prototype.removeAttributeNS" id="apidoc.element.min-document.dom_element.prototype.removeAttributeNS">
+        function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>removeAttributeNS
+        <span class="apidocSignatureSpan">(namespace, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Element_removeAttributeNS(namespace, name) {
+    var attributes = this._attributes[namespace];
+    if (attributes) {
+        delete attributes[name]
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+DOMElement.prototype.getAttribute = function _Element_getAttribute(name) {
+    return this.getAttributeNS(null, name)
+}
+
+DOMElement.prototype.removeAttribute = function _Element_removeAttribute(name) {
+    return this.<span class="apidocCodeKeywordSpan">removeAttributeNS</span>(null, name)
+}
+
+DOMElement.prototype.hasAttribute = function _Element_hasAttribute(name) {
+    return this.hasAttributeNS(null, name)
+}
+
+DOMElement.prototype.removeEventListener = removeEventListener
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_element.prototype.removeChild" id="apidoc.element.min-document.dom_element.prototype.removeChild">
+        function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>removeChild
+        <span class="apidocSignatureSpan">(elem)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Element_removeChild(elem) {
+    // TODO: Throw NotFoundError if elem.parentNode !== this
+
+    var index = this.childNodes.indexOf(elem)
+    this.childNodes.splice(index, 1)
+
+    elem.parentNode = null
+    return elem
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+DOMElement.prototype.type = &#x22;DOMElement&#x22;
+DOMElement.prototype.nodeType = 1
+
+DOMElement.prototype.appendChild = function _Element_appendChild(child) {
+    if (child.parentNode) {
+        child.parentNode.<span class="apidocCodeKeywordSpan">removeChild</span>(child)
+    }
+
+    this.childNodes.push(child)
+    child.parentNode = this
+
+    return child
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_element.prototype.removeEventListener" id="apidoc.element.min-document.dom_element.prototype.removeEventListener">
+        function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>removeEventListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function removeEventListener(type, listener) {
+    var elem = this
+
+    if (!elem.listeners) {
+        return
+    }
+
+    if (!elem.listeners[type]) {
+        return
+    }
+
+    var list = elem.listeners[type]
+    var index = list.indexOf(listener)
+    if (index !== -1) {
+        list.splice(index, 1)
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_element.prototype.replaceChild" id="apidoc.element.min-document.dom_element.prototype.replaceChild">
+        function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>replaceChild
+        <span class="apidocSignatureSpan">(elem, needle)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Element_replaceChild(elem, needle) {
+    // TODO: Throw NotFoundError if needle.parentNode !== this
+
+    if (elem.parentNode) {
+        elem.parentNode.removeChild(elem)
+    }
+
+    var index = this.childNodes.indexOf(needle)
+
+    needle.parentNode = null
+    this.childNodes[index] = elem
+    elem.parentNode = this
+
+    return needle
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_element.prototype.setAttribute" id="apidoc.element.min-document.dom_element.prototype.setAttribute">
+        function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>setAttribute
+        <span class="apidocSignatureSpan">(name, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Element_setAttribute(name, value) {
+    return this.setAttributeNS(null, name, value)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_element.prototype.setAttributeNS" id="apidoc.element.min-document.dom_element.prototype.setAttributeNS">
+        function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>setAttributeNS
+        <span class="apidocSignatureSpan">(namespace, name, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Element_setAttributeNS(namespace, name, value) {
+    var prefix = null
+    var localName = name
+    var colonPosition = name.indexOf(&#x22;:&#x22;)
+    if (colonPosition &#x3e; -1) {
+        prefix = name.substr(0, colonPosition)
+        localName = name.substr(colonPosition + 1)
+    }
+    if (this.tagName === &#x27;INPUT&#x27; &#x26;&#x26; name === &#x27;type&#x27;) {
+      this.type = value;
+    }
+    else {
+      var attributes = this._attributes[namespace] || (this._attributes[namespace] = {})
+      attributes[localName] = {value: value, prefix: prefix}
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+DOMElement.prototype.hasAttributeNS =
+    function _Element_hasAttributeNS(namespace, name) {
+        var attributes = this._attributes[namespace]
+        return !!attributes &#x26;&#x26; name in attributes;
+    }
+
+DOMElement.prototype.setAttribute = function _Element_setAttribute(name, value) {
+    return this.<span class="apidocCodeKeywordSpan">setAttributeNS</span>(null, name, value)
+}
+
+DOMElement.prototype.getAttribute = function _Element_getAttribute(name) {
+    return this.getAttributeNS(null, name)
+}
+
+DOMElement.prototype.removeAttribute = function _Element_removeAttribute(name) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_element.prototype.toString" id="apidoc.element.min-document.dom_element.prototype.toString">
+        function <span class="apidocSignatureSpan">min-document.dom_element.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Element_toString() {
+    return serializeNode(this)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function escapeText(s) {
+    var str = &#x27;&#x27;;
+
+    if (typeof(s) === &#x27;string&#x27;) {
+        str = s;
+    } else if (s) {
+        str = s.<span class="apidocCodeKeywordSpan">toString</span>();
+    }
+
+    return str
+        .replace(/&#x26;/g, &#x22;&#x26;amp;&#x22;)
+        .replace(/&#x3c;/g, &#x22;&#x26;lt;&#x22;)
+        .replace(/&#x3e;/g, &#x22;&#x26;gt;&#x22;)
+}
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.min-document.dom_fragment" id="apidoc.module.min-document.dom_fragment">module min-document.dom_fragment</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_fragment.dom_fragment" id="apidoc.element.min-document.dom_fragment.dom_fragment">
+        function <span class="apidocSignatureSpan">min-document.</span>dom_fragment
+        <span class="apidocSignatureSpan">(owner)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DocumentFragment(owner) {
+    if (!(this instanceof DocumentFragment)) {
+        return new DocumentFragment()
+    }
+
+    this.childNodes = []
+    this.parentNode = null
+    this.ownerDocument = owner || null
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.min-document.dom_fragment.prototype" id="apidoc.module.min-document.dom_fragment.prototype">module min-document.dom_fragment.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_fragment.prototype.appendChild" id="apidoc.element.min-document.dom_fragment.prototype.appendChild">
+        function <span class="apidocSignatureSpan">min-document.dom_fragment.prototype.</span>appendChild
+        <span class="apidocSignatureSpan">(child)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Element_appendChild(child) {
+    if (child.parentNode) {
+        child.parentNode.removeChild(child)
+    }
+
+    this.childNodes.push(child)
+    child.parentNode = this
+
+    return child
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var document = require(&#x22;min-document&#x22;)
+
+var div = document.createElement(&#x22;div&#x22;)
+div.className = &#x22;foo bar&#x22;
+
+var span = document.createElement(&#x22;span&#x22;)
+div.<span class="apidocCodeKeywordSpan">appendChild</span>(span)
+span.textContent = &#x22;Hello!&#x22;
+
+/*  &#x3c;div class=&#x22;foo bar&#x22;&#x3e;
+        &#x3c;span&#x3e;Hello!&#x3c;/span&#x3e;
+    &#x3c;/div&#x3e;
+*/
+var html = String(div)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_fragment.prototype.removeChild" id="apidoc.element.min-document.dom_fragment.prototype.removeChild">
+        function <span class="apidocSignatureSpan">min-document.dom_fragment.prototype.</span>removeChild
+        <span class="apidocSignatureSpan">(elem)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Element_removeChild(elem) {
+    // TODO: Throw NotFoundError if elem.parentNode !== this
+
+    var index = this.childNodes.indexOf(elem)
+    this.childNodes.splice(index, 1)
+
+    elem.parentNode = null
+    return elem
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+DOMElement.prototype.type = &#x22;DOMElement&#x22;
+DOMElement.prototype.nodeType = 1
+
+DOMElement.prototype.appendChild = function _Element_appendChild(child) {
+    if (child.parentNode) {
+        child.parentNode.<span class="apidocCodeKeywordSpan">removeChild</span>(child)
+    }
+
+    this.childNodes.push(child)
+    child.parentNode = this
+
+    return child
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_fragment.prototype.replaceChild" id="apidoc.element.min-document.dom_fragment.prototype.replaceChild">
+        function <span class="apidocSignatureSpan">min-document.dom_fragment.prototype.</span>replaceChild
+        <span class="apidocSignatureSpan">(elem, needle)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Element_replaceChild(elem, needle) {
+    // TODO: Throw NotFoundError if needle.parentNode !== this
+
+    if (elem.parentNode) {
+        elem.parentNode.removeChild(elem)
+    }
+
+    var index = this.childNodes.indexOf(needle)
+
+    needle.parentNode = null
+    this.childNodes[index] = elem
+    elem.parentNode = this
+
+    return needle
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_fragment.prototype.toString" id="apidoc.element.min-document.dom_fragment.prototype.toString">
+        function <span class="apidocSignatureSpan">min-document.dom_fragment.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _DocumentFragment_toString() {
+    return this.childNodes.map(function (node) {
+        return String(node)
+    }).join(&#x22;&#x22;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function escapeText(s) {
+    var str = &#x27;&#x27;;
+
+    if (typeof(s) === &#x27;string&#x27;) {
+        str = s;
+    } else if (s) {
+        str = s.<span class="apidocCodeKeywordSpan">toString</span>();
+    }
+
+    return str
+        .replace(/&#x26;/g, &#x22;&#x26;amp;&#x22;)
+        .replace(/&#x3c;/g, &#x22;&#x26;lt;&#x22;)
+        .replace(/&#x3e;/g, &#x22;&#x26;gt;&#x22;)
+}
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.min-document.dom_text" id="apidoc.module.min-document.dom_text">module min-document.dom_text</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_text.dom_text" id="apidoc.element.min-document.dom_text.dom_text">
+        function <span class="apidocSignatureSpan">min-document.</span>dom_text
+        <span class="apidocSignatureSpan">(value, owner)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DOMText(value, owner) {
+    if (!(this instanceof DOMText)) {
+        return new DOMText(value)
+    }
+
+    this.data = value || &#x22;&#x22;
+    this.length = this.data.length
+    this.ownerDocument = owner || null
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.min-document.dom_text.prototype" id="apidoc.module.min-document.dom_text.prototype">module min-document.dom_text.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_text.prototype.replaceData" id="apidoc.element.min-document.dom_text.prototype.replaceData">
+        function <span class="apidocSignatureSpan">min-document.dom_text.prototype.</span>replaceData
+        <span class="apidocSignatureSpan">(index, length, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function replaceData(index, length, value) {
+    var current = this.data
+    var left = current.substring(0, index)
+    var right = current.substring(index + length, current.length)
+    this.data = left + value + right
+    this.length = this.data.length
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.dom_text.prototype.toString" id="apidoc.element.min-document.dom_text.prototype.toString">
+        function <span class="apidocSignatureSpan">min-document.dom_text.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Text_toString() {
+    return this.data
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function escapeText(s) {
+    var str = &#x27;&#x27;;
+
+    if (typeof(s) === &#x27;string&#x27;) {
+        str = s;
+    } else if (s) {
+        str = s.<span class="apidocCodeKeywordSpan">toString</span>();
+    }
+
+    return str
+        .replace(/&#x26;/g, &#x22;&#x26;amp;&#x22;)
+        .replace(/&#x3c;/g, &#x22;&#x26;lt;&#x22;)
+        .replace(/&#x3e;/g, &#x22;&#x26;gt;&#x22;)
+}
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.min-document.event" id="apidoc.module.min-document.event">module min-document.event</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.event.event" id="apidoc.element.min-document.event.event">
+        function <span class="apidocSignatureSpan">min-document.</span>event
+        <span class="apidocSignatureSpan">(family)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Event(family) {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.min-document.event.prototype" id="apidoc.module.min-document.event.prototype">module min-document.event.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.event.prototype.initEvent" id="apidoc.element.min-document.event.prototype.initEvent">
+        function <span class="apidocSignatureSpan">min-document.event.prototype.</span>initEvent
+        <span class="apidocSignatureSpan">(type, bubbles, cancelable)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Event_initEvent(type, bubbles, cancelable) {
+    this.type = type
+    this.bubbles = bubbles
+    this.cancelable = cancelable
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.min-document.event.prototype.preventDefault" id="apidoc.element.min-document.event.prototype.preventDefault">
+        function <span class="apidocSignatureSpan">min-document.event.prototype.</span>preventDefault
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _Event_preventDefault() {
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
